@@ -1,0 +1,69 @@
+<div class="content">
+	<h1>Расписание</h1>
+	<p>Обновления от {{data}} <b>(дата подставляется шаблоном)</b></p>
+	<table>
+		<tr class="head">
+			<th></th>
+			<th>Школа на Власова*</th>
+			<th>Кашенкин Луг**</th>
+			<th>Online</th>
+		</tr>
+		<tr>
+			<th>Специалисты в помощь</th>
+			<td>Пн, 17 мая 2021<br />15:00 - 18:00</td>
+			<td>Вт, 18 мая 2021<br />15:00 - 18:00</td>
+			<td>Сб, 15 мая 2021<br />11:00 - 14:00</td>
+		</tr>
+		<tr class="even">
+			<th>Распространенные сложности в процессе обучения</th>
+			<td>Пн, 24 мая 2021<br />15:00 - 18:00</td>
+			<td>Вт, 25 мая 2021<br />15:00 - 18:00</td>
+			<td>Сб, 15 мая 2021<br />14:00 - 17:00</td>
+		</tr>
+		<tr>
+			<th>Основная программа для детей с РАС</th>
+			<td>Пн, 7 июня 2021<br />11:00 - 14:00</td>
+			<td>Вт, 8 июня 2021<br />11:00 - 14:00</td>
+			<td>Вт, 8 июня 2021<br />15:00 - 18:00</td>
+		</tr>
+		<tr class="even">
+			<th>Индивидуальный подход в условиях инклюзии <p>(для педагогов)</p></th>
+			<td>Ср, 9 июня 2021<br />11:00 - 16:00</td>
+			<td>Чт, 10 июня 2021<br />11:00 - 16:00</td>
+			<td>Пт, 11 июня 2021<br />11:00 - 17:00</td>
+		</tr>
+		<tr>
+			<th>ABA-терапия</th>
+			<td>Пн, 14 июня 2021<br />10:00 - 13:00</td>
+			<td>Вт, 15 июня 2021<br />11:00 - 14:00</td>
+			<td>Пн, 14 июня 2021<br />14:00 - 17:00</td>
+		</tr>
+		<tr class="even">
+			<th>Родительский клуб</th>
+			<td>Ср, 12 мая 2021<br />17:00 - 18:30</td>
+			<td>Чт, 13 мая 2021<br />17:00 - 18:30</td>
+			<td>Пт, 14 мая 2021<br />17:00 - 19:30</td>
+		</tr>
+	</table>
+	<p>*Школа на Власова: г. Москва, Улица Архитектора Власова, д 19, стр 2</p>
+	<p>**Кошенкин Луг: г. Москва, Улица Кашенкин Луг, д. 7</p>
+	<form action="" method="post">
+		<fieldset>
+			<legend>Регистрация</legend>
+			<p><label class="title" for="name">Ваше имя:</label>
+				 <input type="text" name="name" id="name"><br />
+				 <label class="title" for="email">Ваш email:</label>
+				 <input type="text" name="email" id="email"></p>
+			<p><label for="location" class="title">Территория:</label>
+				 <select name="location" id="location">
+					 <option value="av">Школа на Власова</option>
+					 <option value="kl">Кашенкин Луг</option>
+					 <option value="ol">Online</option>
+				 </select></p>
+			<span class="title">Вы педагог?</span>
+			<label><input type="radio" name="member" value="yes" /> Да</label>
+			<label><input type="radio" name="member" value="no" /> Нет</label></p>
+		</fieldset>
+	    <div class="submit"><input type="submit" value="Зарегистрироваться" /></div>
+	</form>
+</div>
