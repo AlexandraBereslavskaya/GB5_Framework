@@ -1,0 +1,25 @@
+﻿<div class="content">
+	<h1>Наши специалисты</h1>
+		{% for center_name in object_dict %}
+		<li>{{center_name}}</li>
+		{% endfor %}
+	<ul>
+		{% for center_name in object_dict %}
+		<h2>{{center_name}}</h2>
+		<table>
+			<tr class="head">
+				<th>Специалист</th>
+				<th>Квалификация</th>
+				<th>Стаж</th>
+			</tr>
+			{% for specialist in object_dict[center_name]%}
+			<tr>
+				<th>{{specialist["name"]}}</th>
+				<th>{{specialist["speciality"]}}</th>
+				<th>{{specialist["work_experience"]}}</th>
+			</tr>
+			{% endfor %}
+		</table>
+		{% endfor %}
+	</ul>
+</div>
