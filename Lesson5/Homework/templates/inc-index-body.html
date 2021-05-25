@@ -1,0 +1,24 @@
+<div>
+    <h2>На этой странице доступно создание новых категорий и курсов</h2>
+</div>
+<div>
+	<a href="/category-creation/">Создать новую категорию</a>
+</div>
+<div>
+	<h1>Доступные категорий</h1>
+    {% for item in objects_list %}
+    <li>
+        {{item.name}} <span>Количество курсов: {{item.course_number()}}</span>
+        {% if item.course_number()>0 %}
+    	    <a href="/course-list/?id={{item.category_id}}">Курсы данной категории</a>
+        {% endif %}
+            <a href="/course-creation/?id={{item.category_id}}">Создать курс в данной категории</a></li>
+    </li>
+    {% endfor %}
+    <br>
+    <br>
+	<div>
+		<li><a href="/course-list/">Список всех курсов</a></li>
+		<!--<li><a href="/course-creation/">Создать курс</a></li>-->
+	</div>
+</div>
