@@ -1,0 +1,33 @@
+<div>
+    <a href="/course-list/">назад</a>
+</div>
+<br>
+<br>
+<div>
+    <h1>Регистрация студента на курс {{course_name}}</h1>
+    <form action="" method="post">
+            <input type="text" name="name" placeholder="ФИО">
+            <input type="text" name="phone" placeholder="Телефон для связи">
+            <input type="text" name="email" placeholder="email">
+            <input name="course_name" value="{{course_name}}" type="hidden"></input>
+        <div type="submit"><input type="submit" value="Зарегистрироваться"/></div>
+    </form>
+</div>
+<br>
+<br>
+{% if objects_list %}
+<div>
+    <table>
+        <tr class="head">
+            <th>ФИО</th>
+            <th>email</th>
+        </tr>
+        {% for student in objects_list %}
+        <tr>
+            <th>{{student['name']}}</th>
+            <th>{{student['email']}}</th>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endif %}

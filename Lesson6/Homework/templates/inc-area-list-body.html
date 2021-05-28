@@ -1,0 +1,34 @@
+<div>
+    <a href="/index/">Вернутся на главную</a>
+</div>
+<h1>Контакты</h1>
+{% if objects_list %}
+<div>
+	<h2>Открытые площадки</h2>
+    <table>
+        <tr class="head">
+            <th>Название</th>
+            <th>Город</th>
+            <th>Адрес</th>
+            <th>Телефон</th>
+        </tr>
+        {% for area in objects_list %}
+        <tr>
+            <th>{{area['name']}}</th>
+            <th>{{area['city']}}</th>
+            <th>{{area['address']}}</th>
+            <th>{{area['phone_number']}}</th>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% else %}
+	<h2>Открытых площадок не найдено</h2>
+{% endif %}
+<br>
+<br>
+<div>
+    <li>
+        <a href="/area-creation/">Добавить площадку</a>
+    </li>
+</div>

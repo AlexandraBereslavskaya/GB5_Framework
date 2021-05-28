@@ -1,0 +1,22 @@
+<div>
+    <!--<a href="/course-list/?id={{id}}">назад</a>-->
+    <a href="/">назад</a>
+</div>
+<br>
+<br>
+<div>
+    {% for item in objects_list %}
+    <li> {{item.name}}</li>
+    {% endfor %}
+</div>
+<div>
+    <h1>Создание курсов для категории "{{name}}"</h1>
+    <form method="post">
+        {% if course_name %}
+            <input type="text" name="name" value="{{course_name}}">
+        {% else %}
+            <input type="text" name="name" placeholder="Название">
+        {% endif %}
+        <button type="submit">Сохранить</button>
+    </form>
+</div>
